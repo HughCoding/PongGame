@@ -1,5 +1,5 @@
 using System;
-using System.Drawing;
+using System.Drawing;           // BIBLIOTECAS (1)
 using System.Windows.Forms;
 
 namespace SimplePongGame
@@ -8,11 +8,11 @@ namespace SimplePongGame
     {
     
         int ballXspeed = 9;
-        int ballYspeed = 6;
-        int playerSpeed = 8;
+        int ballYspeed = 6;              // VELOCIDADE DA BOLA(COM ALTERAÇÃO NAS VARIÁVEIS) (2)
+        int playerSpeed = 8;             //  VELOCIDADE DO JOGADOR E CPU (3)
         int cpuSpeed = 5;
 
-        int playerScoreValue = 0;
+        int playerScoreValue = 0;        // SISTEMA DE PONTUAÇÃO (4)
         int cpuScoreValue = 0;
 
         bool goUp = false;
@@ -30,7 +30,7 @@ namespace SimplePongGame
             SetupPauseMenu();
         }
 
-        private void SetupPauseMenu()
+        private void SetupPauseMenu()                 // MENU DE PAUSA (FUNCIONALIDADE) (6)
         {
             pauseMenu.Size = this.ClientSize;
             pauseMenu.BackColor = Color.FromArgb(150, 0, 0, 0); 
@@ -87,7 +87,7 @@ namespace SimplePongGame
             cpuLabel.Text = cpuScoreValue.ToString();
 
 
-            ball.Left += ballXspeed;
+            ball.Left += ballXspeed;                  // ACELERAÇÃO DA BOLA (5)
             ball.Top += ballYspeed;
 
 
