@@ -92,4 +92,4 @@ Tem pause menu com botões.
 
 Sem alteração:
 
-Não existe menu de pausa.
+Não existe pause menu.
