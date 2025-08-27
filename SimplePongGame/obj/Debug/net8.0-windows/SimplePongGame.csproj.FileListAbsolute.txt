@@ -1,0 +1,48 @@
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.exe
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.deps.json
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.runtimeconfig.json
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.dll
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.pdb
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.Form1.resources
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.csproj.GenerateResource.cache
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.AssemblyInfoInputs.cache
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.AssemblyInfo.cs
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.dll
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\refint\SimplePongGame.dll
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.pdb
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.genruntimeconfig.cache
+D:\Desenvolvimento\!codigos\CS\Presencial\!atividades\WF\22\SimplePongGame\obj\Debug\net8.0-windows\ref\SimplePongGame.dll
+C:\Users\Marco Antônio\source\repos\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.exe
+C:\Users\Marco Antônio\source\repos\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.deps.json
+C:\Users\Marco Antônio\source\repos\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.runtimeconfig.json
+C:\Users\Marco Antônio\source\repos\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.dll
+C:\Users\Marco Antônio\source\repos\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.pdb
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.Form1.resources
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.csproj.GenerateResource.cache
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.AssemblyInfoInputs.cache
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.AssemblyInfo.cs
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.csproj.CoreCompileInputs.cache
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.dll
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\refint\SimplePongGame.dll
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.pdb
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.genruntimeconfig.cache
+C:\Users\Marco Antônio\source\repos\SimplePongGame\obj\Debug\net8.0-windows\ref\SimplePongGame.dll
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.exe
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.deps.json
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.runtimeconfig.json
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.dll
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\bin\Debug\net8.0-windows\SimplePongGame.pdb
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.Form1.resources
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.csproj.GenerateResource.cache
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.AssemblyInfoInputs.cache
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.AssemblyInfo.cs
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.csproj.CoreCompileInputs.cache
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.dll
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\refint\SimplePongGame.dll
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.pdb
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\SimplePongGame.genruntimeconfig.cache
+c:\Users\SAMSUNG\Desktop\SimplePongGame\SimplePongGame\obj\Debug\net8.0-windows\ref\SimplePongGame.dll
