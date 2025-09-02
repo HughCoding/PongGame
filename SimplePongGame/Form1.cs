@@ -6,7 +6,7 @@ namespace SimplePongGame
 {
     public partial class Form1 : Form
     {
-    
+
         int ballXspeed = 9;
         int ballYspeed = 6;              // VELOCIDADE DA BOLA(COM ALTERAÇÃO NAS VARIÁVEIS) (2)
         int playerSpeed = 8;             //  VELOCIDADE DO JOGADOR E CPU (3)
@@ -33,22 +33,22 @@ namespace SimplePongGame
         private void SetupPauseMenu()                 // MENU DE PAUSA (FUNCIONALIDADE) (6)
         {
             pauseMenu.Size = this.ClientSize;
-            pauseMenu.BackColor = Color.FromArgb(150, 0, 0, 0); 
+            pauseMenu.BackColor = Color.FromArgb(150, 0, 0, 0);
             pauseMenu.Visible = false;
 
-            
+
             btnContinue.Text = "Resume";
             btnContinue.Size = new Size(120, 40);
             btnContinue.Location = new Point(ClientSize.Width / 2 - 60, 150);
             btnContinue.Click += (s, e) => { pauseMenu.Visible = false; gameTimer.Start(); };
 
-           
+
             btnRestart.Text = "Reset";
             btnRestart.Size = new Size(120, 40);
             btnRestart.Location = new Point(ClientSize.Width / 2 - 60, 200);
             btnRestart.Click += (s, e) => { ResetGame(); pauseMenu.Visible = false; gameTimer.Start(); };
 
-           
+
             btnExit.Text = "Exit";
             btnExit.Size = new Size(120, 40);
             btnExit.Location = new Point(ClientSize.Width / 2 - 60, 250);
@@ -111,7 +111,7 @@ namespace SimplePongGame
                 else ballYspeed--;
             }
 
-     
+
             if (ball.Top < 0 || ball.Top + ball.Height > ClientSize.Height)
                 ballYspeed = -ballYspeed;
 
