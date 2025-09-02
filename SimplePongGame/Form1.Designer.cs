@@ -1,166 +1,129 @@
-using System;
-using System.Drawing;           // BIBLIOTECAS (1)
-using System.Windows.Forms;
-
 namespace SimplePongGame
 {
-    public partial class Form1 : Form
+    partial class Form1
     {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-        int ballXspeed = 9;
-        int ballYspeed = 6;              // VELOCIDADE DA BOLA(COM ALTERAÇÃO NAS VARIÁVEIS) (2)
-        int playerSpeed = 8;             //  VELOCIDADE DO JOGADOR E CPU (3)
-        int cpuSpeed = 5;
-
-        int playerScoreValue = 0;        // SISTEMA DE PONTUAÇÃO (4)
-        int cpuScoreValue = 0;
-
-        bool goUp = false;
-        bool goDown = false;
-
-        Panel pauseMenu = new Panel();
-        Button btnContinue = new Button();
-        Button btnRestart = new Button();
-        Button btnExit = new Button();
-
-        public Form1()
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            InitializeComponent();
-            this.KeyPreview = true;
-            SetupPauseMenu();
-        }
-
-        private void SetupPauseMenu()                 // MENU DE PAUSA (FUNCIONALIDADE) (6)
-        {
-            pauseMenu.Size = this.ClientSize;
-            pauseMenu.BackColor = Color.FromArgb(150, 0, 0, 0);
-            pauseMenu.Visible = false;
-
-
-            btnContinue.Text = "Resume";
-            btnContinue.Size = new Size(120, 40);
-            btnContinue.Location = new Point(ClientSize.Width / 2 - 60, 150);
-            btnContinue.Click += (s, e) => { pauseMenu.Visible = false; gameTimer.Start(); };
-
-
-            btnRestart.Text = "Reset";
-            btnRestart.Size = new Size(120, 40);
-            btnRestart.Location = new Point(ClientSize.Width / 2 - 60, 200);
-            btnRestart.Click += (s, e) => { ResetGame(); pauseMenu.Visible = false; gameTimer.Start(); };
-
-
-            btnExit.Text = "Exit";
-            btnExit.Size = new Size(120, 40);
-            btnExit.Location = new Point(ClientSize.Width / 2 - 60, 250);
-            btnExit.Click += (s, e) => { Application.Exit(); };
-
-            pauseMenu.Controls.Add(btnContinue);
-            pauseMenu.Controls.Add(btnRestart);
-            pauseMenu.Controls.Add(btnExit);
-
-            this.Controls.Add(pauseMenu);
-            pauseMenu.BringToFront();
-        }
-
-        private void KeyIsDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Up) goUp = true;
-            if (e.KeyCode == Keys.Down) goDown = true;
-
-            if (e.KeyCode == Keys.Escape && !pauseMenu.Visible)
+            if (disposing && (components != null))
             {
-                pauseMenu.Visible = true;
-                gameTimer.Stop();
+                components.Dispose();
             }
+            base.Dispose(disposing);
         }
 
-        private void KeyIsUp(object sender, KeyEventArgs e)
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
         {
-            if (e.KeyCode == Keys.Up) goUp = false;
-            if (e.KeyCode == Keys.Down) goDown = false;
+            components = new System.ComponentModel.Container();
+            gameTimer = new System.Windows.Forms.Timer(components);
+            player = new PictureBox();
+            ball = new PictureBox();
+            cpu = new PictureBox();
+            playerScore = new Label();
+            cpuLabel = new Label();
+            ((System.ComponentModel.ISupportInitialize)player).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ball).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)cpu).BeginInit();
+            SuspendLayout();
+            // 
+            // gameTimer
+            // 
+            gameTimer.Enabled = true;
+            gameTimer.Interval = 20;
+            gameTimer.Tick += timer1_Tick;
+            // 
+            // player
+            // 
+            player.BackColor = Color.White;
+            player.Location = new Point(2, 192);
+            player.Name = "player";
+            player.Size = new Size(27, 127);
+            player.TabIndex = 0;
+            player.TabStop = false;
+            // 
+            // ball
+            // 
+            ball.BackColor = Color.White;
+            ball.Location = new Point(434, 239);
+            ball.Name = "ball";
+            ball.Size = new Size(27, 26);
+            ball.TabIndex = 1;
+            ball.TabStop = false;
+            // 
+            // cpu
+            // 
+            cpu.BackColor = Color.White;
+            cpu.Location = new Point(898, 230);
+            cpu.Name = "cpu";
+            cpu.Size = new Size(27, 127);
+            cpu.TabIndex = 2;
+            cpu.TabStop = false;
+            // 
+            // playerScore
+            // 
+            playerScore.AutoSize = true;
+            playerScore.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            playerScore.ForeColor = Color.White;
+            playerScore.Location = new Point(105, 9);
+            playerScore.Name = "playerScore";
+            playerScore.Size = new Size(21, 15);
+            playerScore.TabIndex = 3;
+            playerScore.Text = "00";
+            // 
+            // cpuLabel
+            // 
+            cpuLabel.AutoSize = true;
+            cpuLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cpuLabel.ForeColor = Color.White;
+            cpuLabel.Location = new Point(735, 9);
+            cpuLabel.Name = "cpuLabel";
+            cpuLabel.Size = new Size(21, 15);
+            cpuLabel.TabIndex = 4;
+            cpuLabel.Text = "00";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
+            ClientSize = new Size(928, 574);
+            Controls.Add(cpuLabel);
+            Controls.Add(playerScore);
+            Controls.Add(cpu);
+            Controls.Add(ball);
+            Controls.Add(player);
+            Name = "Form1";
+            Text = "Pong Game";
+            KeyDown += KeyIsDown;
+            KeyUp += KeyIsUp;
+            ((System.ComponentModel.ISupportInitialize)player).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ball).EndInit();
+            ((System.ComponentModel.ISupportInitialize)cpu).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
+        #endregion
 
-            playerScore.Text = playerScoreValue.ToString();
-            cpuLabel.Text = cpuScoreValue.ToString();
-
-
-            ball.Left += ballXspeed;                  // ACELERAÇÃO DA BOLA (5)
-            ball.Top += ballYspeed;
-
-
-            if (cpu.Top + cpu.Height / 2 < ball.Top + ball.Height / 2)
-                cpu.Top += cpuSpeed;
-            else
-                cpu.Top -= cpuSpeed;
-
-            if (cpu.Top < 0) cpu.Top = 0;
-            if (cpu.Top + cpu.Height > ClientSize.Height) cpu.Top = ClientSize.Height - cpu.Height;
-
-
-            if (ball.Bounds.IntersectsWith(player.Bounds) || ball.Bounds.IntersectsWith(cpu.Bounds))
-            {
-                ballXspeed = -ballXspeed;
-
-                if (ballXspeed > 0) ballXspeed++;
-                else ballXspeed--;
-
-                if (ballYspeed > 0) ballYspeed++;
-                else ballYspeed--;
-            }
-
-
-            if (ball.Top < 0 || ball.Top + ball.Height > ClientSize.Height)
-                ballYspeed = -ballYspeed;
-
-            // Pontuação
-            if (ball.Left < 0)
-            {
-                cpuScoreValue++;
-                ResetBall();
-            }
-            if (ball.Left + ball.Width > ClientSize.Width)
-            {
-                playerScoreValue++;
-                ResetBall();
-            }
-
-
-            if (goUp && player.Top > 0) player.Top -= playerSpeed;
-            if (goDown && player.Top + player.Height < ClientSize.Height) player.Top += playerSpeed;
-
-
-            if (playerScoreValue >= 10)
-            {
-                gameTimer.Stop();
-                MessageBox.Show("Você venceu!");
-            }
-            if (cpuScoreValue >= 10)
-            {
-                gameTimer.Stop();
-                MessageBox.Show("CPU venceu!");
-            }
-        }
-
-        private void ResetBall()
-        {
-            ball.Left = ClientSize.Width / 2 - ball.Width / 2;
-            ball.Top = ClientSize.Height / 2 - ball.Height / 2;
-
-            Random rand = new Random();
-            ballXspeed = (rand.Next(2) == 0 ? 9 : -9);
-            ballYspeed = (rand.Next(2) == 0 ? 6 : -6);
-        }
-
-        private void ResetGame()
-        {
-            playerScoreValue = 0;
-            cpuScoreValue = 0;
-            player.Top = ClientSize.Height / 2 - player.Height / 2;
-            cpu.Top = ClientSize.Height / 2 - cpu.Height / 2;
-            ResetBall();
-        }
+        private System.Windows.Forms.Timer gameTimer;
+        private PictureBox player;
+        private PictureBox ball;
+        private PictureBox cpu;
+        private Label playerScore;
+        private Label cpuLabel;
     }
 }
