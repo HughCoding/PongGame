@@ -1,22 +1,26 @@
 using System;
-using System.Drawing;           // BIBLIOTECAS (1)
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SimplePongGame
 {
     public partial class Form1 : Form
     {
-
         int ballXspeed = 9;
-        int ballYspeed = 6;              // VELOCIDADE DA BOLA(COM ALTERAÇÃO NAS VARIÁVEIS) (2)
-        int playerSpeed = 8;             //  VELOCIDADE DO JOGADOR E CPU (3)
+        int ballYspeed = 6;              // VELOCIDADE DA BOLA(COM ALTERAÇÃO NAS VARIÁVEIS) (1)
+        int playerSpeed = 8;             //  VELOCIDADE DO JOGADOR E CPU (2)
         int cpuSpeed = 5;
 
-        int playerScoreValue = 0;        // SISTEMA DE PONTUAÇÃO (4)
+        int playerScoreValue = 0;        // SISTEMA DE PONTUAÇÃO (3)
         int cpuScoreValue = 0;
 
         bool goUp = false;
         bool goDown = false;
+
+    
+        int fakeBallXspeed = 7;           // BOLA FALSA (4)
+        int fakeBallYspeed = 4;
+        bool fakeBallActive = false;
 
         Panel pauseMenu = new Panel();
         Button btnContinue = new Button();
@@ -30,24 +34,21 @@ namespace SimplePongGame
             SetupPauseMenu();
         }
 
-        private void SetupPauseMenu()                 // MENU DE PAUSA (FUNCIONALIDADE) (6)
+        private void SetupPauseMenu()                 // MENU DE PAUSA (5)
         {
             pauseMenu.Size = this.ClientSize;
             pauseMenu.BackColor = Color.FromArgb(150, 0, 0, 0);
             pauseMenu.Visible = false;
-
 
             btnContinue.Text = "Resume";
             btnContinue.Size = new Size(120, 40);
             btnContinue.Location = new Point(ClientSize.Width / 2 - 60, 150);
             btnContinue.Click += (s, e) => { pauseMenu.Visible = false; gameTimer.Start(); };
 
-
             btnRestart.Text = "Reset";
             btnRestart.Size = new Size(120, 40);
             btnRestart.Location = new Point(ClientSize.Width / 2 - 60, 200);
             btnRestart.Click += (s, e) => { ResetGame(); pauseMenu.Visible = false; gameTimer.Start(); };
-
 
             btnExit.Text = "Exit";
             btnExit.Size = new Size(120, 40);
@@ -82,14 +83,11 @@ namespace SimplePongGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
             playerScore.Text = playerScoreValue.ToString();
             cpuLabel.Text = cpuScoreValue.ToString();
 
-
-            ball.Left += ballXspeed;                  // ACELERAÇÃO DA BOLA (5)
+            ball.Left += ballXspeed;                  // ACELERAÇÃO DA BOLA (6)
             ball.Top += ballYspeed;
-
 
             if (cpu.Top + cpu.Height / 2 < ball.Top + ball.Height / 2)
                 cpu.Top += cpuSpeed;
@@ -98,7 +96,6 @@ namespace SimplePongGame
 
             if (cpu.Top < 0) cpu.Top = 0;
             if (cpu.Top + cpu.Height > ClientSize.Height) cpu.Top = ClientSize.Height - cpu.Height;
-
 
             if (ball.Bounds.IntersectsWith(player.Bounds) || ball.Bounds.IntersectsWith(cpu.Bounds))
             {
@@ -111,11 +108,10 @@ namespace SimplePongGame
                 else ballYspeed--;
             }
 
-
             if (ball.Top < 0 || ball.Top + ball.Height > ClientSize.Height)
                 ballYspeed = -ballYspeed;
 
-            // Pontuação
+      
             if (ball.Left < 0)
             {
                 cpuScoreValue++;
@@ -127,10 +123,52 @@ namespace SimplePongGame
                 ResetBall();
             }
 
+        
+            if (!fakeBallActive && (playerScoreValue >= 5 || cpuScoreValue >= 5))
+            {
+                fakeBall.Left = ClientSize.Width / 2 - fakeBall.Width / 2;
+                fakeBall.Top = ClientSize.Height / 2 - fakeBall.Height / 2;
+
+                Random rand = new Random();
+                fakeBallXspeed = (rand.Next(2) == 0 ? 7 : -7);
+                fakeBallYspeed = (rand.Next(2) == 0 ? 4 : -4);
+
+                fakeBall.Visible = true;
+                fakeBallActive = true;
+            }
+
+            if (fakeBallActive)
+            {
+                fakeBall.Left += fakeBallXspeed;
+                fakeBall.Top += fakeBallYspeed;
+
+                if (fakeBall.Top < 0 || fakeBall.Top + fakeBall.Height > ClientSize.Height)
+                    fakeBallYspeed = -fakeBallYspeed;
+
+                if (fakeBall.Bounds.IntersectsWith(player.Bounds) || fakeBall.Bounds.IntersectsWith(cpu.Bounds))
+                {
+                    fakeBallXspeed = -fakeBallXspeed;
+
+                    if (fakeBallXspeed > 0) fakeBallXspeed++;
+                    else fakeBallXspeed--;
+
+                    if (fakeBallYspeed > 0) fakeBallYspeed++;
+                    else fakeBallYspeed--;
+                }
+
+                if (fakeBall.Left < 0 || fakeBall.Left + fakeBall.Width > ClientSize.Width)
+                {
+                    fakeBall.Left = ClientSize.Width / 2 - fakeBall.Width / 2;
+                    fakeBall.Top = ClientSize.Height / 2 - fakeBall.Height / 2;
+
+                    Random rand = new Random();
+                    fakeBallXspeed = (rand.Next(2) == 0 ? 7 : -7);
+                    fakeBallYspeed = (rand.Next(2) == 0 ? 4 : -4);
+                }
+            }
 
             if (goUp && player.Top > 0) player.Top -= playerSpeed;
             if (goDown && player.Top + player.Height < ClientSize.Height) player.Top += playerSpeed;
-
 
             if (playerScoreValue >= 10)
             {
@@ -161,6 +199,9 @@ namespace SimplePongGame
             player.Top = ClientSize.Height / 2 - player.Height / 2;
             cpu.Top = ClientSize.Height / 2 - cpu.Height / 2;
             ResetBall();
+
+            fakeBallActive = false;
+            fakeBall.Visible = false;
         }
     }
 }
