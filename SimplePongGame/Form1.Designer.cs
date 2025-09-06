@@ -2,15 +2,8 @@ namespace SimplePongGame
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,108 +15,106 @@ namespace SimplePongGame
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
             gameTimer = new System.Windows.Forms.Timer(components);
-            player = new PictureBox();
-            ball = new PictureBox();
-            cpu = new PictureBox();
-            playerScore = new Label();
-            cpuLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)player).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ball).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)cpu).BeginInit();
+            player = new System.Windows.Forms.PictureBox();
+            ball = new System.Windows.Forms.PictureBox();
+            cpu = new System.Windows.Forms.PictureBox();
+            playerScore = new System.Windows.Forms.Label();
+            cpuLabel = new System.Windows.Forms.Label();
+            fakeBall = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(ball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(cpu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fakeBall)).BeginInit();
             SuspendLayout();
-            // 
-            // gameTimer
-            // 
+          
             gameTimer.Enabled = true;
             gameTimer.Interval = 20;
             gameTimer.Tick += timer1_Tick;
-            // 
-            // player
-            // 
-            player.BackColor = Color.White;
-            player.Location = new Point(2, 192);
+      
+            player.BackColor = System.Drawing.Color.White;
+            player.Location = new System.Drawing.Point(2, 192);
             player.Name = "player";
-            player.Size = new Size(27, 127);
+            player.Size = new System.Drawing.Size(27, 127);
             player.TabIndex = 0;
             player.TabStop = false;
-            // 
-            // ball
-            // 
-            ball.BackColor = Color.White;
-            ball.Location = new Point(434, 239);
+       
+            ball.BackColor = System.Drawing.Color.White;
+            ball.Location = new System.Drawing.Point(434, 239);
             ball.Name = "ball";
-            ball.Size = new Size(27, 26);
+            ball.Size = new System.Drawing.Size(27, 26);
             ball.TabIndex = 1;
             ball.TabStop = false;
-            // 
-            // cpu
-            // 
-            cpu.BackColor = Color.White;
-            cpu.Location = new Point(898, 230);
+    
+            cpu.BackColor = System.Drawing.Color.White;
+            cpu.Location = new System.Drawing.Point(898, 230);
             cpu.Name = "cpu";
-            cpu.Size = new Size(27, 127);
+            cpu.Size = new System.Drawing.Size(27, 127);
             cpu.TabIndex = 2;
             cpu.TabStop = false;
-            // 
-            // playerScore
-            // 
+         
             playerScore.AutoSize = true;
-            playerScore.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            playerScore.ForeColor = Color.White;
-            playerScore.Location = new Point(105, 9);
+            playerScore.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            playerScore.ForeColor = System.Drawing.Color.White;
+            playerScore.Location = new System.Drawing.Point(105, 9);
             playerScore.Name = "playerScore";
-            playerScore.Size = new Size(21, 15);
+            playerScore.Size = new System.Drawing.Size(21, 15);
             playerScore.TabIndex = 3;
             playerScore.Text = "00";
-            // 
-            // cpuLabel
-            // 
+          
             cpuLabel.AutoSize = true;
-            cpuLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cpuLabel.ForeColor = Color.White;
-            cpuLabel.Location = new Point(735, 9);
+            cpuLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            cpuLabel.ForeColor = System.Drawing.Color.White;
+            cpuLabel.Location = new System.Drawing.Point(735, 9);
             cpuLabel.Name = "cpuLabel";
-            cpuLabel.Size = new Size(21, 15);
+            cpuLabel.Size = new System.Drawing.Size(21, 15);
             cpuLabel.TabIndex = 4;
             cpuLabel.Text = "00";
+          
+            fakeBall.BackColor = System.Drawing.Color.Gray;
+            fakeBall.Location = new System.Drawing.Point(434, 239);
+            fakeBall.Name = "fakeBall";
+            fakeBall.Size = new System.Drawing.Size(27, 26);
+            fakeBall.TabIndex = 5;
+            fakeBall.TabStop = false;
+            fakeBall.Visible = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
-            ClientSize = new Size(928, 574);
-            Controls.Add(cpuLabel);
-            Controls.Add(playerScore);
-            Controls.Add(cpu);
-            Controls.Add(ball);
-            Controls.Add(player);
-            Name = "Form1";
-            Text = "Pong Game";
-            KeyDown += KeyIsDown;
-            KeyUp += KeyIsUp;
-            ((System.ComponentModel.ISupportInitialize)player).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ball).EndInit();
-            ((System.ComponentModel.ISupportInitialize)cpu).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(928, 574);
+            this.Controls.Add(this.fakeBall);
+            this.Controls.Add(this.cpuLabel);
+            this.Controls.Add(this.playerScore);
+            this.Controls.Add(this.cpu);
+            this.Controls.Add(this.ball);
+            this.Controls.Add(this.player);
+            this.Name = "Form1";
+            this.Text = "Pong Game";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
+            ((System.ComponentModel.ISupportInitialize)(player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(ball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(cpu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fakeBall)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
         private System.Windows.Forms.Timer gameTimer;
-        private PictureBox player;
-        private PictureBox ball;
-        private PictureBox cpu;
-        private Label playerScore;
-        private Label cpuLabel;
+        private System.Windows.Forms.PictureBox player;
+        private System.Windows.Forms.PictureBox ball;
+        private System.Windows.Forms.PictureBox cpu;
+        private System.Windows.Forms.Label playerScore;
+        private System.Windows.Forms.Label cpuLabel;
+        private System.Windows.Forms.PictureBox fakeBall;
     }
 }
