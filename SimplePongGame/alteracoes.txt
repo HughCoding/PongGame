@@ -88,16 +88,6 @@ Sem alteração:
 
 Não existe pause menu.
 
-# BOLA RICOCHETEANDO NO FUNDO DA CPU / PLAYER (7) (forms)
-
-Com alteração: 
-
-A bola não bate infinitamente no fundo do bloco cpu / player.
-
-Sem alteração:
-
-A bola bate infinitamente no fundo do bloco, causando alteração na velocidade da bola impossibilitando de rebater.
-
 ////////////////////////////////////////////////////////
 
 # ACELERAÇÃO DA BOLA (6)
@@ -111,6 +101,20 @@ Sem alteração:
 A velocidade da bola só muda quando alguém faz ponto:
 ballx += 2;  jogador marca
 ballx -= 2;  CPU marca
+
+////////////////////////////////////////////////////////
+
+# BOLA RICOCHETEANDO NO FUNDO DA CPU / PLAYER (7) (forms)
+
+Com alteração: 
+
+A bola não bate infinitamente no fundo do bloco cpu / player.
+
+Sem alteração:
+
+A bola bate infinitamente no fundo do bloco, causando alteração na velocidade da bola impossibilitando de rebater.
+
+
 
 
 
