@@ -16,7 +16,7 @@ using static System.Formats.Asn1.AsnWriter;
 
 ////////////////////////////////////////////////////////
 
-# VELOCIDADE DA BOLA(COM ALTERAÇÃO NAS VARIÁVEIS) (2)
+# VELOCIDADE DA BOLA(COM ALTERAÇÃO NAS VARIÁVEIS) (1)
 
 Com alteração:
 
@@ -34,7 +34,7 @@ int bally = 5;
 
 ////////////////////////////////////////////////////////
 
-# VELOCIDADE DO JOGADOR E CPU (3)
+# VELOCIDADE DO JOGADOR E CPU (2)
 
 Com alteração:
 
@@ -51,7 +51,7 @@ cpu.Top = ball.Top + 30;
 
 ////////////////////////////////////////////////////////
 
-# SISTEMA DE PONTUAÇÃO (4)
+# SISTEMA DE PONTUAÇÃO (3)
 
 Com alteração:
 
@@ -70,21 +70,15 @@ ball.Left = 434
 
 ////////////////////////////////////////////////////////
 
-# ACELERAÇÃO DA BOLA (5)
+# BOLA FALSA (4)
 
-Com alteração:
-
-A bola acelera cada vez que bate em uma raquete.
-
-Sem alteração:
-
-A velocidade da bola só muda quando alguém faz ponto:
-ballx += 2;  jogador marca
-ballx -= 2;  CPU marca
+int fakeBallXspeed = 7;          
+int fakeBallYspeed = 4;
+bool fakeBallActive = false;
 
 ////////////////////////////////////////////////////////
 
-# MENU DE PAUSA (FUNCIONALIDADE) (6)
+# MENU DE PAUSA (5)
 
 Com alteração: 
 
@@ -103,3 +97,20 @@ A bola não bate infinitamente no fundo do bloco cpu / player.
 Sem alteração:
 
 A bola bate infinitamente no fundo do bloco, causando alteração na velocidade da bola impossibilitando de rebater.
+
+////////////////////////////////////////////////////////
+
+# ACELERAÇÃO DA BOLA (6)
+
+Com alteração:
+
+A bola acelera cada vez que bate em uma raquete.
+
+Sem alteração:
+
+A velocidade da bola só muda quando alguém faz ponto:
+ballx += 2;  jogador marca
+ballx -= 2;  CPU marca
+
+
+
